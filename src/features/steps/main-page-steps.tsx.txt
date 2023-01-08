@@ -1,0 +1,17 @@
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fireEvent, render, screen } from '@testing-library/react';
+import App from "../../App";
+
+Given('I am in the main Page with a counter value of {int}', (n: number) => {
+    render(<App />);
+});
+
+When('I click on the {string} button', (buttonName: string) => {
+    fireEvent.click(
+     screen.getByRole('button', { name: buttonName })
+    );
+});
+
+Then('the counter should increment by {int}', (increment: number) => {
+    expect(screen.getByRole('textbox', { name: 'count'})).toHaveValue(increment);
+});

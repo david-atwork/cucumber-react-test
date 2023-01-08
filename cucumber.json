@@ -1,0 +1,9 @@
+{
+    "default": {
+      "format": ["html:cucumber-report.html"],
+      "paths": ["./src/features/*.feature"],
+      "import": ["./src/features/**/*.tsx"],
+      "requireModule": ["@babel/register"]
+    }
+  }
+  

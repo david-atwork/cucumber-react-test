@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --config jest.config.json",
+    "test:automation": "cucumber-js --config cucumber.json",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +40,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/register": "^7.18.9",
+    "@cucumber/cucumber": "^8.10.0",
+    "@types/cucumber": "^7.0.0",
+    "jest-cucumber": "^3.0.1",
+    "ts-jest": "^29.0.3"
   }
 }

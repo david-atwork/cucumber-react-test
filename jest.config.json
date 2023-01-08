@@ -1,0 +1,8 @@
+{
+    "testMatch": [
+        "**/*.steps.tsx"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["./src/setupTests.ts"]
+}
