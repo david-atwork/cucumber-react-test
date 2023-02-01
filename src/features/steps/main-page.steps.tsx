@@ -17,7 +17,7 @@ defineFeature(feature, test => {
         });
         
         then(/^the counter should increment by (\d+)$/, (increment: number) => {
-            expect(screen.getByRole('textbox', { name: 'Total'})).toHaveValue(increment);
+            expect(screen.queryByRole('heading', { name: increment.toString()})).toBeTruthy();
         });        
     });
   });
